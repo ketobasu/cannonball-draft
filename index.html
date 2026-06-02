@@ -92,8 +92,11 @@ section{padding:6rem 0}
 .cases-count{text-align:center;margin-top:2rem;font-size:0.8rem;color:var(--text3)}
 
 #partners{background:var(--white)}
-.partner-logo{max-height:72px;max-width:160px;object-fit:contain;opacity:1;transition:opacity 0.3s}
-.partner-card:hover .partner-logo{opacity:0.8}
+.partner-logo-wrap{height:80px;display:flex;align-items:center;justify-content:center}
+.partner-logo{max-height:80px;max-width:160px;object-fit:contain;opacity:1;transition:opacity 0.3s}
+.partner-logo:hover{opacity:0.8}
+.partner-logo.logo-sm{max-height:52px}
+.partner-logo.logo-md{max-height:64px}
 .partners-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3rem}
 .partner-card{background:var(--white);padding:2rem 1.5rem;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;transition:box-shadow 0.2s;min-height:140px;border:1px solid var(--border);border-radius:4px}
 .partner-card:hover{box-shadow:0 4px 16px rgba(0,0,0,0.07)}
@@ -333,47 +336,47 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
     </div>
     <div class="partners-grid">
       <div class="partner-card">
-        <img class="partner-logo" src="images/logos/Dalecarnegie.png" alt="Dale Carnegie Training">
+        <div class="partner-logo-wrap"><img class="partner-logo" src="images/logos/Dalecarnegie.png" alt="Dale Carnegie Training"></div>
         <div class="partner-name">Dale Carnegie Training</div>
         <div class="partner-sub">米国本部</div>
       </div>
       <div class="partner-card">
-        <img class="partner-logo" src="images/logos/JIAC.png" alt="株式会社ジェイック">
+        <div class="partner-logo-wrap"><img class="partner-logo" src="images/logos/JIAC.png" alt="株式会社ジェイック"></div>
         <div class="partner-name">株式会社ジェイック</div>
       </div>
       <div class="partner-card">
-        <img class="partner-logo" src="images/logos/YKT.png" alt="よかタウン株式会社">
+        <div class="partner-logo-wrap"><img class="partner-logo" src="images/logos/YKT.png" alt="よかタウン株式会社"></div>
         <div class="partner-name">よかタウン株式会社</div>
       </div>
       <div class="partner-card">
-        <img class="partner-logo" src="images/logos/CNGWAY.png" alt="CNGWAY">
+        <div class="partner-logo-wrap"><img class="partner-logo" src="images/logos/CNGWAY.png" alt="CNGWAY"></div>
         <div class="partner-name">CNGWAY</div>
       </div>
       <div class="partner-card">
-        <img class="partner-logo" src="images/logos/NEWONE.png" alt="株式会社NEWONE">
+        <div class="partner-logo-wrap"><img class="partner-logo" src="images/logos/NEWONE.png" alt="株式会社NEWONE"></div>
         <div class="partner-name">株式会社NEWONE</div>
       </div>
       <div class="partner-card">
-        <img class="partner-logo" src="images/logos/AcceleratePeformance.png" alt="Accelerate Performance">
+        <div class="partner-logo-wrap"><img class="partner-logo" src="images/logos/AcceleratePeformance.png" alt="Accelerate Performance"></div>
         <div class="partner-name">Accelerate Performance</div>
         <div class="partner-sub">カリフォルニア州</div>
       </div>
       <div class="partner-card">
-        <img class="partner-logo" src="images/logos/Googleforstartup.png" alt="Google for Startups">
+        <div class="partner-logo-wrap"><img class="partner-logo" src="images/logos/Googleforstartup.png" alt="Google for Startups"></div>
         <div class="partner-name">Google for Startups</div>
       </div>
       <div class="partner-card">
-        <img class="partner-logo" src="images/logos/PROACTIV.png" alt="PROAKTIV">
+        <div class="partner-logo-wrap"><img class="partner-logo" src="images/logos/PROACTIV.png" alt="PROAKTIV"></div>
         <div class="partner-name">PROAKTIV</div>
         <div class="partner-sub">シンガポール</div>
       </div>
       <div class="partner-card">
-        <img class="partner-logo" src="images/logos/LHH.png" alt="LHH Japan">
+        <div class="partner-logo-wrap"><img class="partner-logo" src="images/logos/LHH.png" alt="LHH Japan"></div>
         <div class="partner-name">LHH Japan</div>
         <div class="partner-sub">Adecco Ltd.</div>
       </div>
       <div class="partner-card">
-        <img class="partner-logo" src="images/logos/informa.png" alt="Informa PLC">
+        <div class="partner-logo-wrap"><img class="partner-logo" src="images/logos/informa.png" alt="Informa PLC"></div>
         <div class="partner-name">Informa PLC</div>
         <div class="partner-sub">英国</div>
       </div>
