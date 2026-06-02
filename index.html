@@ -10,6 +10,7 @@
 :root{--orange:#f05a1a;--orange2:#ff7a3d;--orange-light:#fff3ee;--charcoal:#1c1c1e;--charcoal2:#2c2c2e;--white:#ffffff;--bg:#f7f7f5;--text:#1c1c1e;--text2:#636366;--text3:#aeaeb2;--border:#e5e5ea;--border2:#f0f0ed}
 html{scroll-behavior:smooth}
 body{background:var(--white);color:var(--text);font-family:'Inter','Noto Sans JP',sans-serif;font-weight:400;line-height:1.7;overflow-x:hidden}
+
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 3rem;height:64px;background:rgba(255,255,255,0.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--border2)}
 .nav-logo{font-family:'Barlow Condensed',sans-serif;font-size:1.25rem;font-weight:900;letter-spacing:0.06em;color:var(--charcoal);text-decoration:none}
 .nav-logo span{color:var(--orange)}
@@ -18,6 +19,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .nav-links a:hover{color:var(--orange);border-bottom-color:var(--orange)}
 .nav-cta{padding:0.5rem 1.4rem;background:var(--orange);color:#fff;border:none;border-radius:3px;font-size:0.8rem;font-weight:600;letter-spacing:0.05em;cursor:pointer;text-decoration:none;transition:background 0.2s}
 .nav-cta:hover{background:var(--charcoal)}
+
 #hero{padding:64px 0 0;display:flex;flex-direction:column}
 .hero-image-wrap{position:relative;width:100%;height:68vh;overflow:hidden}
 .hero-image-wrap img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
@@ -34,34 +36,34 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .btn-primary:hover{background:var(--charcoal)}
 .btn-outline{padding:0.85rem 2.2rem;background:transparent;color:var(--text);border:1.5px solid var(--border);border-radius:3px;font-size:0.85rem;font-weight:500;cursor:pointer;text-decoration:none;transition:all 0.2s;white-space:nowrap}
 .btn-outline:hover{border-color:var(--charcoal)}
-#story{padding:0}
+
+#whoweare{padding:0}
 .story-grid{display:grid;grid-template-columns:1fr 1fr;min-height:520px}
 .story-image{position:relative;overflow:hidden}
 .story-image img{width:100%;height:100%;object-fit:cover}
-.story-image-overlay{position:absolute;inset:0;background:rgba(240,90,26,0.12)}
+.story-image-overlay{position:absolute;inset:0;background:rgba(240,90,26,0.10)}
 .story-content{padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;background:var(--white)}
 .story-quote{font-family:'Barlow Condensed',sans-serif;font-size:clamp(3.5rem,6vw,6rem);font-weight:900;font-style:italic;color:var(--charcoal);line-height:1;margin-bottom:2rem}
 .story-quote span{color:var(--orange)}
 .story-body{font-size:0.88rem;color:var(--text2);line-height:2}
 .story-body p+p{margin-top:1rem}
-#values{padding:0}
 .values-strip{display:grid;grid-template-columns:repeat(3,1fr)}
 .value-block{padding:5rem 3.5rem;border-right:1px solid var(--border);position:relative;overflow:hidden;transition:background 0.25s;background:var(--white)}
 .value-block:last-child{border-right:none}
 .value-block:hover{background:var(--bg)}
 .vb-bg-letter{font-family:'Barlow Condensed',sans-serif;font-size:18rem;font-weight:900;font-style:italic;color:rgba(240,90,26,0.04);position:absolute;right:-2rem;bottom:-4rem;line-height:1;pointer-events:none;user-select:none;transition:color 0.25s}
 .value-block:hover .vb-bg-letter{color:rgba(240,90,26,0.07)}
-.vb-num{font-size:0.65rem;font-weight:700;letter-spacing:0.3em;color:var(--orange);text-transform:uppercase;margin-bottom:1.5rem}
 .vb-keyword{font-family:'Barlow Condensed',sans-serif;font-size:clamp(3.5rem,5vw,5.5rem);font-weight:900;font-style:italic;color:var(--charcoal);line-height:1;margin-bottom:1.5rem}
 .vb-sub{font-size:0.9rem;font-weight:600;color:var(--text);margin-bottom:1rem}
 .vb-body{font-size:0.8rem;color:var(--text2);line-height:2}
+
 section{padding:6rem 0}
 .container{max-width:1100px;margin:0 auto;padding:0 3rem}
 .section-eyebrow{font-size:0.68rem;font-weight:700;letter-spacing:0.25em;color:var(--orange);text-transform:uppercase;margin-bottom:0.6rem}
-.section-title{font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:300;color:var(--text);line-height:1.2;letter-spacing:-0.02em}
-.section-title strong{font-weight:800}
+.section-title{font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;color:var(--text);line-height:1.2;letter-spacing:-0.02em}
 .section-header{margin-bottom:3.5rem}
 .section-body{font-size:0.9rem;color:var(--text2);margin-top:0.75rem;max-width:540px;line-height:1.9}
+
 #services{background:var(--white)}
 .services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
 .service-card{border:1.5px solid var(--border);border-radius:4px;padding:2.2rem;transition:border-color 0.2s,box-shadow 0.2s;position:relative;overflow:hidden}
@@ -79,6 +81,7 @@ section{padding:6rem 0}
 .photo-card-label{padding:1rem 1.2rem;background:var(--white);border:1px solid var(--border);border-top:none}
 .photo-card-title{font-size:0.88rem;font-weight:600;color:var(--text);margin-bottom:0.2rem}
 .photo-card-sub{font-size:0.75rem;color:var(--text2)}
+
 #cases{background:var(--bg)}
 .cases-table{width:100%;border-collapse:collapse;margin-top:2rem}
 .cases-table th{font-size:0.7rem;font-weight:700;color:var(--text3);letter-spacing:0.15em;text-transform:uppercase;padding:0.75rem 1rem;text-align:left;border-bottom:2px solid var(--border)}
@@ -87,9 +90,17 @@ section{padding:6rem 0}
 .cases-table tbody tr:hover{background:var(--white)}
 .td-industry{display:inline-block;font-size:0.68rem;font-weight:700;padding:0.2rem 0.65rem;border-radius:2px;background:var(--orange-light);color:var(--orange);white-space:nowrap}
 .cases-count{text-align:center;margin-top:2rem;font-size:0.8rem;color:var(--text3)}
+
+#partners{background:var(--white)}
+.partners-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:3rem}
+.partner-card{background:var(--white);padding:2rem 1.5rem;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;transition:background 0.2s;min-height:120px}
+.partner-card:hover{background:var(--bg)}
+.partner-name{font-size:0.82rem;font-weight:600;color:var(--text);line-height:1.4;margin-bottom:0.3rem}
+.partner-sub{font-size:0.7rem;color:var(--text3)}
+
 #profile{background:var(--white);padding:0}
 .profile-hero{position:relative;height:480px;overflow:hidden}
-.profile-hero img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.profile-hero img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
 .profile-hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(28,28,30,0.7) 0%,rgba(28,28,30,0.1) 60%,transparent 100%)}
 .profile-hero-text{position:absolute;top:50%;left:5rem;transform:translateY(-50%);max-width:560px}
 .profile-quote{font-size:clamp(1.1rem,2vw,1.5rem);font-weight:300;color:#fff;line-height:1.7;margin-bottom:1.5rem}
@@ -100,8 +111,11 @@ section{padding:6rem 0}
 .profile-photo img{width:100%;height:100%;object-fit:cover}
 .profile-name-ja{font-size:1.7rem;font-weight:300;color:var(--text);margin-top:1.2rem;letter-spacing:0.05em}
 .profile-name-en{font-size:0.78rem;color:var(--text3);letter-spacing:0.15em;margin-top:0.3rem}
-.profile-role{font-size:0.8rem;color:var(--orange);margin-top:0.5rem;font-weight:600}
-.profile-sns{display:flex;gap:0.5rem;margin-top:1rem}
+.profile-role-title{font-size:0.82rem;color:var(--orange);margin-top:0.5rem;font-weight:600;line-height:1.6}
+.profile-affiliations{margin-top:0.8rem;list-style:none}
+.profile-affiliations li{font-size:0.75rem;color:var(--text2);padding:0.2rem 0;line-height:1.5}
+.profile-affiliations li::before{content:'·  ';color:var(--orange);font-weight:700}
+.profile-sns{display:flex;gap:0.5rem;margin-top:1.2rem}
 .sns-btn{font-size:0.7rem;font-weight:500;padding:0.3rem 0.8rem;border:1.5px solid var(--border);border-radius:2px;color:var(--text2);text-decoration:none;transition:border-color 0.2s,color 0.2s}
 .sns-btn:hover{border-color:var(--orange);color:var(--orange)}
 .profile-body{font-size:0.84rem;color:var(--text2);line-height:2;margin-bottom:2rem}
@@ -109,6 +123,7 @@ section{padding:6rem 0}
 .tl-item{display:grid;grid-template-columns:4.5rem 1fr;gap:1.5rem;padding:0.85rem 0;border-bottom:1px solid var(--border2);align-items:baseline}
 .tl-year{font-size:0.78rem;font-weight:700;color:var(--orange);font-variant-numeric:tabular-nums}
 .tl-desc{font-size:0.82rem;color:var(--text2)}
+
 #info{background:var(--bg)}
 .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem}
 .co-table{width:100%;border-collapse:collapse;margin-top:1.5rem}
@@ -119,11 +134,11 @@ section{padding:6rem 0}
 .news-item{display:grid;grid-template-columns:5.5rem 1fr;gap:1rem;padding:0.85rem 0;border-bottom:1px solid var(--border2);align-items:baseline}
 .news-date{font-size:0.7rem;color:var(--text3);white-space:nowrap}
 .news-text{font-size:0.82rem;color:var(--text2)}
+
 #contact{background:var(--charcoal);padding:6rem 0}
 .contact-wrap{max-width:640px;margin:0 auto;padding:0 3rem;text-align:center}
 .contact-eyebrow{font-size:0.68rem;font-weight:700;letter-spacing:0.25em;color:var(--orange);text-transform:uppercase;margin-bottom:0.6rem}
-.contact-title{font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;color:var(--white);line-height:1.2;letter-spacing:-0.02em}
-.contact-title strong{font-weight:800}
+.contact-title{font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;color:var(--white);line-height:1.2;letter-spacing:-0.02em}
 .contact-body{font-size:0.9rem;color:rgba(255,255,255,0.55);margin-top:1rem;line-height:1.9}
 .contact-form{margin-top:2.5rem;text-align:left;display:flex;flex-direction:column;gap:0.85rem}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:0.85rem}
@@ -133,6 +148,7 @@ section{padding:6rem 0}
 textarea.form-input{resize:vertical;min-height:120px}
 .form-submit{width:100%;padding:0.95rem;background:var(--orange);color:#fff;border:none;border-radius:3px;font-size:0.88rem;font-weight:700;letter-spacing:0.05em;cursor:pointer;transition:background 0.2s}
 .form-submit:hover{background:var(--orange2)}
+
 footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,0.06)}
 .footer-logo{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:900;letter-spacing:0.08em;color:#fff}
 .footer-logo span{color:var(--orange)}
@@ -141,12 +157,14 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
 .footer-sns a:hover{color:var(--orange)}
 .footer-copy{font-size:0.7rem;color:rgba(255,255,255,0.25)}
 #recruit{display:none}
+
 @media(max-width:768px){
   nav{padding:0 1.5rem}.nav-links{display:none}
   .container{padding:0 1.5rem}
   .hero-text-on-image,.hero-bottom{padding:2rem}
   .hero-bottom{grid-template-columns:1fr}
   .story-grid,.values-strip,.services-grid,.photo-cards,.info-grid{grid-template-columns:1fr}
+  .partners-grid{grid-template-columns:repeat(2,1fr)}
   .story-image{height:260px}
   .profile-detail{grid-template-columns:1fr;padding:3rem 1.5rem;gap:2rem}
   .profile-hero-text{left:2rem;right:2rem}
@@ -160,11 +178,11 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
 <nav>
   <a class="nav-logo" href="#">CANNON<span>BALL</span></a>
   <ul class="nav-links">
-    <li><a href="#story">Story</a></li>
-    <li><a href="#values">Philosophy</a></li>
+    <li><a href="#whoweare">Who We Are</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#cases">Cases</a></li>
-    <li><a href="#profile">Profile</a></li>
+    <li><a href="#partners">Partners</a></li>
+    <li><a href="#profile">Founder</a></li>
     <li><a href="#info">Company</a></li>
   </ul>
   <a href="#contact" class="nav-cta">お問い合わせ</a>
@@ -188,14 +206,14 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
   </div>
 </section>
 
-<section id="story">
+<section id="whoweare">
   <div class="story-grid">
     <div class="story-image">
-      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80&fit=crop" alt="スピードと躍動感">
+      <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=900&q=80&fit=crop" alt="多様な個性が集まる楽しいチーム">
       <div class="story-image-overlay"></div>
     </div>
     <div class="story-content">
-      <p class="section-eyebrow">Our Name</p>
+      <p class="section-eyebrow">Who We Are</p>
       <div class="story-quote">CANNON<span>BALL</span></div>
       <div class="story-body">
         <p>社名の由来は、1981年公開の映画「キャノンボール」。それぞれが個性と強みを全開にしてゴールを目指す——あの熱狂と突破力が、私たちの原点です。</p>
@@ -204,27 +222,21 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
       </div>
     </div>
   </div>
-</section>
-
-<section id="values">
   <div class="values-strip">
     <div class="value-block">
       <div class="vb-bg-letter">E</div>
-      <div class="vb-num">01 — Philosophy</div>
       <div class="vb-keyword">Excite</div>
       <div class="vb-sub">ワクワクを原動力にする</div>
       <div class="vb-body">自分の内側から湧き上がるワクワクを大切にする。「やるべきこと」ではなく「やりたいこと」に耳を傾けることで、創造の源となるエネルギーが生まれる。その小さな興味や好奇心が、変化と成長の原動力になる。</div>
     </div>
     <div class="value-block">
       <div class="vb-bg-letter">E</div>
-      <div class="vb-num">02 — Philosophy</div>
       <div class="vb-keyword">Empower</div>
       <div class="vb-sub">想いを行動に変える</div>
       <div class="vb-body">ワクワクから生まれた想いを、実際の行動に変える。「まずやってみる」ことで自分への信頼が深まり、その挑戦の姿勢は周囲にも勇気を与え、互いの成長が共鳴し合う環境をつくり出す。</div>
     </div>
     <div class="value-block">
       <div class="vb-bg-letter">E</div>
-      <div class="vb-num">03 — Philosophy</div>
       <div class="vb-keyword">Expand</div>
       <div class="vb-sub">枠を超えて共に進化する</div>
       <div class="vb-body">新しい視点を受け入れ、これまでの枠を超えることで、自分という存在がより大きなつながりの中に溶け込んでいく。多様な個性が響き合い、個と組織はともに進化していく。</div>
@@ -236,7 +248,7 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
   <div class="container">
     <div class="section-header">
       <p class="section-eyebrow">Services</p>
-      <h2 class="section-title">サービス<strong>内容</strong></h2>
+      <h2 class="section-title">サービス内容</h2>
       <p class="section-body">組織の課題に応じたオーダーメイドのトレーニング・コンサルティングを提供します。</p>
     </div>
     <div class="services-grid">
@@ -291,7 +303,7 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
   <div class="container">
     <div class="section-header">
       <p class="section-eyebrow">Cases</p>
-      <h2 class="section-title">支援<strong>実績</strong></h2>
+      <h2 class="section-title">支援実績</h2>
     </div>
     <table class="cases-table">
       <thead><tr><th>業界</th><th>プログラム</th><th>対象・内容</th></tr></thead>
@@ -311,9 +323,60 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
   </div>
 </section>
 
+<section id="partners">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Partners</p>
+      <h2 class="section-title">パートナーシップ</h2>
+    </div>
+    <div class="partners-grid">
+      <div class="partner-card">
+        <div class="partner-name">Dale Carnegie Training</div>
+        <div class="partner-sub">米国本部</div>
+      </div>
+      <div class="partner-card">
+        <div class="partner-name">株式会社ジェイック</div>
+        <div class="partner-sub">JAIC Co., Ltd.</div>
+      </div>
+      <div class="partner-card">
+        <div class="partner-name">よかタウン株式会社</div>
+        <div class="partner-sub">Yoka Town Co., Ltd.</div>
+      </div>
+      <div class="partner-card">
+        <div class="partner-name">CNGWAY</div>
+        <div class="partner-sub"></div>
+      </div>
+      <div class="partner-card">
+        <div class="partner-name">株式会社NEWONE</div>
+        <div class="partner-sub">NEWONE Inc.</div>
+      </div>
+      <div class="partner-card">
+        <div class="partner-name">Accelerate Performance</div>
+        <div class="partner-sub">カリフォルニア州</div>
+      </div>
+      <div class="partner-card">
+        <div class="partner-name">Google for Startups</div>
+        <div class="partner-sub"></div>
+      </div>
+      <div class="partner-card">
+        <div class="partner-name">PROAKTIV</div>
+        <div class="partner-sub">シンガポール</div>
+      </div>
+      <div class="partner-card">
+        <div class="partner-name">LHH Japan</div>
+        <div class="partner-sub">Adecco Ltd.</div>
+      </div>
+      <div class="partner-card">
+        <div class="partner-name">Informa PLC</div>
+        <div class="partner-sub">英国</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="profile">
   <div class="profile-hero">
-    <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=1600&q=80&fit=crop" alt="登壇">
+    <img src="https://images.unsplash.com/photo-1499244571948-7ccddb3583f1?w=1600&q=80&fit=crop" alt="情熱と喜びで輝く人">
     <div class="profile-hero-overlay"></div>
     <div class="profile-hero-text">
       <p class="profile-quote">「ワクワクは、最強の燃料だ。<br>自分が心から楽しんでいるとき、<br>人は最も輝き、最も力強い。」</p>
@@ -325,11 +388,18 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
   </div>
   <div class="profile-detail">
     <div>
-      <!-- 写真を差し替える場合: <img src="images/profile.jpg" alt="石原由一朗"> に変更 -->
       <div class="profile-photo">Photo</div>
       <h3 class="profile-name-ja">石原 由一朗</h3>
       <p class="profile-name-en">Yuichiro Ishihara</p>
-      <p class="profile-role">アクセラレータ｜人財・組織開発コンサルタント</p>
+      <p class="profile-role-title">アクセラレータ ／ 人財・組織開発コンサルタント</p>
+      <ul class="profile-affiliations">
+        <li>Dale Carnegie 米国本部 Global Master Trainer</li>
+        <li>株式会社よかタウン 顧問</li>
+        <li>CNGWAY Partner</li>
+        <li>株式会社NEWONE Partner / Adviser</li>
+        <li>Accelerate Performance, Inc. Consultant</li>
+        <li>立教大学経営学部 兼任講師（〜2020）</li>
+      </ul>
       <div class="profile-sns">
         <a href="#" class="sns-btn">LinkedIn</a>
         <a href="#" class="sns-btn">Instagram</a>
@@ -337,13 +407,14 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
       </div>
     </div>
     <div>
-      <p class="profile-body">広島県生まれ。旭化成グループにて財務会計システム構築・運用および人事部門での採用・人財組織開発を統括。2010年、デール・カーネギー・トレーニング日本法人のトレーニング部門責任者として多数の企業・団体の組織開発を推進。米国ミズーリ州にてデール・カーネギー氏の直系トレーナーに師事し、世界No.1マスタートレーナーから長年薫陶を受ける。</p>
+      <p class="profile-body">広島県生まれ。旭化成グループにて財務会計システム構築・運用および人事部門での採用・人財組織開発を統括。2010年、デール・カーネギー・トレーニング日本法人のトレーニング部門責任者として多数の企業・団体の組織開発を推進。米国ミズーリ州にてデール・カーネギー氏の直系トレーナーに師事し、世界No.1マスタートレーナーから長年薫陶を受け、日本人で初めてGlobal Master Trainerとして認定される。</p>
       <ul class="timeline">
         <li class="tl-item"><span class="tl-year">2010</span><span class="tl-desc">デール・カーネギー・トレーニング日本法人 トレーニング部門責任者</span></li>
         <li class="tl-item"><span class="tl-year">2015</span><span class="tl-desc">米国本部 グローバル・マスター・トレーナー認定（日本人唯一・全世界30名）</span></li>
         <li class="tl-item"><span class="tl-year">2016</span><span class="tl-desc">デール・カーネギー・トレーニング日本法人 取締役</span></li>
         <li class="tl-item"><span class="tl-year">2017</span><span class="tl-desc">立教大学経営学部 兼任講師（グローバルリーダーシップ）</span></li>
-        <li class="tl-item"><span class="tl-year">2019</span><span class="tl-desc">独立・キャノンボール株式会社 設立</span></li>
+        <li class="tl-item"><span class="tl-year">2019</span><span class="tl-desc">独立</span></li>
+        <li class="tl-item"><span class="tl-year">2026</span><span class="tl-desc">キャノンボール株式会社 設立</span></li>
       </ul>
     </div>
   </div>
@@ -354,18 +425,19 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
     <div class="info-grid">
       <div>
         <p class="section-eyebrow">Company</p>
-        <h2 class="section-title">会社<strong>概要</strong></h2>
+        <h2 class="section-title">会社概要</h2>
         <table class="co-table">
           <tr><th>社名</th><td>キャノンボール株式会社<br><span style="font-size:0.75rem;color:var(--text3)">CANNONBALL Inc.</span></td></tr>
           <tr><th>代表取締役</th><td>石原 由一朗</td></tr>
           <tr><th>所在地</th><td>東京都渋谷区神南１丁目</td></tr>
+          <tr><th>資本金</th><td>100万円</td></tr>
           <tr><th>事業内容</th><td>企業経営・組織開発・人材育成およびコンサルティング業務<br><span style="font-size:0.75rem;color:var(--text3)">各種研修・セミナー・講演会・リトリートの企画・実施・運営</span></td></tr>
           <tr><th>URL</th><td><a href="https://cannonballnow.com" style="color:var(--orange);text-decoration:none">cannonballnow.com</a></td></tr>
         </table>
       </div>
       <div>
         <p class="section-eyebrow">News</p>
-        <h2 class="section-title"><strong>最新</strong>情報</h2>
+        <h2 class="section-title">最新情報</h2>
         <div class="news-list">
           <div class="news-item"><span class="news-date">2025.06</span><span class="news-text">ウェブサイトをリニューアルしました</span></div>
         </div>
@@ -379,9 +451,9 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
 <section id="contact">
   <div class="contact-wrap">
     <p class="contact-eyebrow">Contact</p>
-    <h2 class="contact-title">お<strong>問い合わせ</strong></h2>
+    <h2 class="contact-title">お問い合わせ</h2>
     <p class="contact-body">研修・ワークショップの導入検討、サービス内容のご相談はこちらからどうぞ。</p>
-    <!-- Formspree設定後: <form> タグに変更し action="https://formspree.io/f/YOUR_FORM_ID" method="POST" を追加 -->
+    <!-- Formspree設定後: div を form に変え action="https://formspree.io/f/YOUR_FORM_ID" method="POST" を追加、末尾の </div> を </form> に変更 -->
     <div class="contact-form">
       <div class="form-row">
         <input class="form-input" type="text" name="company" placeholder="会社名">
@@ -400,7 +472,7 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
   <div class="footer-sns">
     <a href="#">LinkedIn</a><a href="#">Instagram</a><a href="#">Facebook</a>
   </div>
-  <p class="footer-copy">© 2025 CANNONBALL Inc. All rights reserved.</p>
+  <p class="footer-copy">© 2026 CANNONBALL Inc. All rights reserved.</p>
 </footer>
 
 </body>
