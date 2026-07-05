@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>CANNONBALL Inc. | キャノンボール株式会社</title>
-<meta name="description" content="キャノンボール株式会社（CANNONBALL Inc.）は、組織の生産性を最大化するコンサルティングファームです。業務プロセス改善、組織開発、DX推進を通じ、企業の持続的な成長を支援します。">
+<meta name="description" content="キャノンボール株式会社（CANNONBALL Inc.）は、組織の生産性を最大化するコンサルティングファーム bosses。業務プロセス改善、組織開発、DX推進を通じ、企業の持続的な成長を支援します。">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;700&family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,700;1,900&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -67,6 +67,12 @@ section{padding:6rem 0}
 .section-header{margin-bottom:3.5rem}
 .section-body{font-size:0.9rem;color:var(--text2);margin-top:0.75rem;max-width:540px;line-height:1.9}
 #services{background:var(--white)}
+.concept-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:4rem}
+.concept-block{background:var(--bg);border:1px solid var(--border);border-radius:4px;padding:2.2rem;position:relative;overflow:hidden}
+.cb-letter{font-family:'Barlow Condensed',sans-serif;font-size:5rem;font-weight:900;font-style:italic;color:rgba(240,90,26,0.05);position:absolute;right:1rem;top:0.2rem;line-height:1;pointer-events:none;user-select:none}
+.cb-keyword{font-family:'Barlow Condensed',sans-serif;font-size:1.8rem;font-weight:900;font-style:italic;color:var(--orange);margin-bottom:0.4rem;line-height:1}
+.cb-title{font-size:0.92rem;font-weight:700;color:var(--text);margin-bottom:0.6rem}
+.cb-body{font-size:0.8rem;color:var(--text2);line-height:1.6}
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
 .service-card{border:1.5px solid var(--border);border-radius:4px;padding:2.2rem;transition:border-color 0.2s,box-shadow 0.2s;position:relative;overflow:hidden}
 .service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--orange);transform:scaleX(0);transform-origin:left;transition:transform 0.3s}
@@ -127,7 +133,7 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
   .container{padding:0 1.5rem}
   .hero-text-on-image,.hero-bottom{padding:2rem}
   .hero-bottom{grid-template-columns:1fr}
-  .story-grid,.values-strip,.services-grid,.photo-cards,.info-grid{grid-template-columns:1fr}
+  .story-grid,.values-strip,.concept-strip,.services-grid,.photo-cards,.info-grid{grid-template-columns:1fr}
   .story-image{height:260px}
   .form-row{grid-template-columns:1fr;gap:1.2rem}
   footer{flex-direction:column;gap:1rem;text-align:center}
@@ -175,6 +181,7 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
     </div>
     <div class="story-content">
       <p class="section-eyebrow">About</p>
+      <div class="story-quote">CANNON<span>BALL</span></div>
       <div class="story-body">
         <p>社名の由来は、1981年公開の映画「キャノンボール」。それぞれが個性と強みを全開にしてゴールを目指す——あの熱狂と突破力が、私たちの原点です。</p>
         <p>既存のルールを盲目的に踏襲するのではなく、より良い全体最適のために問い直し、更新していく。自分で考えて、自分で決める。多様な個性がそれぞれの強みを爆発させる。</p>
@@ -209,8 +216,30 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
     <div class="section-header">
       <p class="section-eyebrow">Services</p>
       <h2 class="section-title">ソリューション</h2>
-      <p class="section-body">組織の「人」と「仕組み」の双方からアプローチし、投資リターンを最大化します。</p>
+      <p class="section-body">組織の「人」と「仕組み」の双方からアプローチし、以下の「3S」コンセプトに基づいて最適なソリューションを提供します。</p>
     </div>
+
+    <div class="concept-strip">
+      <div class="concept-block">
+        <div class="cb-letter">S</div>
+        <div class="cb-keyword">Smart</div>
+        <div class="cb-title">テクノロジーの知的な実装</div>
+        <div class="cb-body">生成AIやオートメーションを最適に統合し、単純作業や属人的な判断を自動化・効率化。組織全体の知的生産性を極限まで引き上げます。</div>
+      </div>
+      <div class="concept-block">
+        <div class="cb-letter">S</div>
+        <div class="cb-keyword">Simple</div>
+        <div class="cb-title">複雑性の徹底的な排除</div>
+        <div class="cb-body">業務のボトルネックや無駄なコミュニケーションを削ぎ落とし、誰もが最速で実行できる「迷いのないシンプルなプロセス」をデザインします。</div>
+      </div>
+      <div class="concept-block">
+        <div class="cb-letter">S</div>
+        <div class="cb-keyword">Structured</div>
+        <div class="cb-title">仕組みと組織の構造化</div>
+        <div class="cb-body">一過性の改善にとどまらず、データフローやチーム連携を強固なフレームワークへと落とし込み、持続可能でスケールする強固な組織基盤を構築します。</div>
+      </div>
+    </div>
+
     <div class="services-grid">
       <div class="service-card">
         <div class="sc-num">01</div>
@@ -290,13 +319,15 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
     <p class="contact-body">プロジェクトのご相談、業務効率化・DX推進に関するお問い合わせはこちらから承ります。</p>
     <form class="contact-form" action="#" method="POST">
       <div class="form-row">
-        <div class="form-group">
-          <label class="form-label" for="form-company">会社名</label>
-          <input class="form-input" type="text" id="form-company" name="company" placeholder="例：株式会社サンプル">
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="form-name">お名前<span>*</span></label>
-          <input class="form-input" type="text" id="form-name" name="name" placeholder="例：山田 太郎" required>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="form-company">会社名</label>
+            <input class="form-input" type="text" id="form-company" name="company" placeholder="例：株式会社サンプル">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="form-name">お名前<span>*</span></label>
+            <input class="form-input" type="text" id="form-name" name="name" placeholder="例：山田 太郎" required>
+          </div>
         </div>
       </div>
       <div class="form-group">
