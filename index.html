@@ -14,13 +14,13 @@ body{background:var(--white);color:var(--text);font-family:'Inter','Noto Sans JP
 .animate-fade{opacity:0;transform:translateY(30px);transition:opacity 0.8s ease-out,transform 0.8s ease-out}
 .animate-fade.appear{opacity:1;transform:translateY(0)}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 3rem;height:64px;background:rgba(255,255,255,0.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--border2)}
-.nav-logo{font-family:'Barlow Condensed',sans-serif;font-size:1.25rem;font-weight:900;font-style:italic;letter-spacing:0.06em;color:var(--charcoal);text-decoration:none;z-index:110;}
+.nav-logo-wrap{display:flex;align-items:center;gap:0.5rem;text-decoration:none;z-index:110;}
+.nav-logo-img{height:28px;width:28px;object-fit:contain}
+.nav-logo{font-family:'Barlow Condensed',sans-serif;font-size:1.25rem;font-weight:900;font-style:italic;letter-spacing:0.06em;color:var(--charcoal);}
 .nav-logo span{color:var(--orange)}
 .nav-links{display:flex;list-style:none}
 .nav-links a{font-size:0.8rem;font-weight:500;color:var(--text2);text-decoration:none;padding:0 1rem;height:64px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:color 0.2s,border-color 0.2s}
 .nav-links a:hover{color:var(--orange);border-bottom-color:var(--orange)}
-.nav-cta{padding:0.5rem 1.4rem;background:var(--orange);color:#fff;border:none;border-radius:3px;font-size:0.8rem;font-weight:600;letter-spacing:0.05em;cursor:pointer;text-decoration:none;transition:background 0.2s}
-.nav-cta:hover{background:var(--charcoal)}
 .menu-toggle{display:none;background:none;border:none;cursor:pointer;width:30px;height:24px;position:relative;z-index:110;}
 .menu-toggle span{display:block;width:100%;height:2px;background:var(--charcoal);position:absolute;left:0;transition:all 0.3s ease;}
 .menu-toggle span:nth-child(1){top:2px}
@@ -45,7 +45,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .btn-primary:hover{background:var(--charcoal)}
 .btn-outline{padding:0.85rem 2.2rem;background:transparent;color:var(--text);border:1.5px solid var(--border);border-radius:3px;font-size:0.85rem;font-weight:500;cursor:pointer;text-decoration:none;transition:all 0.2s;white-space:nowrap}
 .btn-outline:hover{border-color:var(--charcoal)}
-#whoweare{padding:0}
+#about{padding:0}
 .story-grid{display:grid;grid-template-columns:1fr 1fr;min-height:520px}
 .story-image{position:relative;overflow:hidden}
 .story-image img{width:100%;height:100%;object-fit:cover}
@@ -88,15 +88,7 @@ section{padding:6rem 0}
 .photo-card-label{padding:1rem 1.2rem;background:var(--white);border:1px solid var(--border);border-top:none}
 .photo-card-title{font-size:0.88rem;font-weight:600;color:var(--text);margin-bottom:0.2rem}
 .photo-card-sub{font-size:0.75rem;color:var(--text2)}
-#cases{background:var(--bg)}
-.cases-table{width:100%;border-collapse:collapse;margin-top:2rem}
-.cases-table th{font-size:0.7rem;font-weight:700;color:var(--text3);letter-spacing:0.15em;text-transform:uppercase;padding:0.75rem 1rem;text-align:left;border-bottom:2px solid var(--border)}
-.cases-table td{font-size:0.83rem;padding:1rem;border-bottom:1px solid var(--border2);vertical-align:middle;color:var(--text2)}
-.cases-table tbody tr{transition:background 0.15s}
-.cases-table tbody tr:hover{background:var(--white)}
-.td-industry{display:inline-block;font-size:0.68rem;font-weight:700;padding:0.2rem 0.65rem;border-radius:2px;background:var(--orange-light);color:var(--orange);white-space:nowrap}
-.cases-count{text-align:center;margin-top:2rem;font-size:0.8rem;color:var(--text3)}
-#info{background:var(--white)}
+#info{background:var(--bg)}
 .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem}
 .co-table{width:100%;border-collapse:collapse;margin-top:1.5rem}
 .co-table tr{border-bottom:1px solid var(--border2)}
@@ -123,6 +115,7 @@ textarea.form-input{resize:vertical;min-height:120px}
 .form-submit{padding:0.85rem 2.2rem;background:var(--orange);color:#fff;border:none;border-radius:3px;font-size:0.85rem;font-weight:600;letter-spacing:0.05em;cursor:pointer;transition:background 0.2s;align-self:center}
 .form-submit:hover{background:var(--orange2)}
 footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,0.06)}
+.footer-logo-wrap{display:flex;align-items:center;gap:0.5rem}
 .footer-logo{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:900;font-style:italic;letter-spacing:0.08em;color:#fff}
 .footer-logo span{color:var(--orange)}
 .footer-sns{display:flex;gap:1.5rem}
@@ -144,23 +137,18 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
   .story-image{height:260px}
   .form-row{grid-template-columns:1fr;gap:1.2rem}
   footer{flex-direction:column;gap:1rem;text-align:center}
-  .cases-table,.cases-table tbody,.cases-table tr,.cases-table td{display:block;width:100%}
-  .cases-table thead{display:none}
-  .cases-table tbody tr{margin-bottom:1.2rem;border:1px solid var(--border);border-radius:4px;padding:1.2rem;background:var(--white);box-shadow:0 2px 8px rgba(0,0,0,0.03)}
-  .cases-table td{border-bottom:none;padding:0.3rem 0}
-  .cases-table td:nth-child(1){margin-bottom:0.5rem}
-  .cases-table td:nth-child(2){font-size:1.1rem;margin-bottom:0.2rem;font-weight:700!important}
-  .cases-table td:nth-child(3){color:var(--text3);font-size:0.8rem}
 }
 </style>
 </head>
 <body>
 <nav>
-  <a class="nav-logo" href="#">CANNON<span>BALL</span></a>
+  <a class="nav-logo-wrap" href="#">
+    <img class="nav-logo-img" src="wordpress_logo_transparent_512x512.png" alt="CANNONBALL Logo">
+    <span class="nav-logo">CANNON<span>BALL</span></span>
+  </a>
   <ul class="nav-links">
-    <li><a href="#whoweare">Who We Are</a></li>
+    <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
-    <li><a href="#cases">Cases</a></li>
     <li><a href="#info">Company</a></li>
   </ul>
   <button class="menu-toggle" aria-label="メニューを開く">
@@ -170,7 +158,7 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
 
 <section id="hero">
   <div class="hero-image-wrap">
-    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&q=80&fit=crop" alt="チームが活発に議論している様子">
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&q=80&fit=crop" alt="スピード感のあるミーティング">
     <div class="hero-overlay"></div>
     <div class="hero-text-on-image">
       <p class="hero-eyebrow">CANNONBALL Inc. ／ キャノンボール株式会社</p>
@@ -186,14 +174,14 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
   </div>
 </section>
 
-<section id="whoweare" class="animate-fade">
+<section id="about" class="animate-fade">
   <div class="story-grid">
     <div class="story-image">
-      <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=900&q=80&fit=crop" alt="多様な個性が集まるチーム" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=900&q=80&fit=crop" alt="疾走感のある夜間都市の光跡" loading="lazy">
       <div class="story-image-overlay"></div>
     </div>
     <div class="story-content">
-      <p class="section-eyebrow">Who We Are</p>
+      <p class="section-eyebrow">About</p>
       <div class="story-quote">CANNON<span>BALL</span></div>
       <div class="story-body">
         <p>社名の由来は、1981年公開の映画「キャノンボール」。それぞれが個性と強みを全開にしてゴールを目指す——あの熱狂と突破力が、私たちの原点です。</p>
@@ -253,47 +241,26 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
     </div>
     <div class="photo-cards">
       <div class="photo-card">
-        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80&fit=crop" alt="コンサルティング風景" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80&fit=crop" alt="テクノロジーネットワーク" loading="lazy">
         <div class="photo-card-label">
           <div class="photo-card-title">プロセスコンサルティング</div>
-          <div class="photo-card-sub">現場の課題に合わせた完全カスタム設計</div>
+          <div class="photo-card-sub">現場の課題に合わせた高度な仕組み化</div>
         </div>
       </div>
       <div class="photo-card">
-        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80&fit=crop" alt="戦略ミーティング" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&q=80&fit=crop" alt="コックピット・スピード感" loading="lazy">
         <div class="photo-card-label">
           <div class="photo-card-title">エグゼクティブ・アドバイザリー</div>
-          <div class="photo-card-sub">経営層・幹部候補への意思決定支援</div>
+          <div class="photo-card-sub">経営層への迅速な意思決定支援</div>
         </div>
       </div>
       <div class="photo-card">
         <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80&fit=crop" alt="データ分析" loading="lazy">
         <div class="photo-card-label">
           <div class="photo-card-title">テクノロジー実装</div>
-          <div class="photo-card-sub">散在するデータを統合し、効率化を実現</div>
-        </div>
+          <div class="photo-card-sub">デジタルソリューションによる自動化</div>
       </div>
     </div>
-  </div>
-</section>
-
-<section id="cases" class="animate-fade">
-  <div class="container">
-    <div class="section-header">
-      <p class="section-eyebrow">Cases</p>
-      <h2 class="section-title">プロジェクト実績</h2>
-    </div>
-    <table class="cases-table">
-      <thead><tr><th>業界</th><th>プロジェクト領域</th><th>対象・内容</th></tr></thead>
-      <tbody>
-        <tr><td><span class="td-industry">IT</span></td><td style="color:var(--text);font-weight:600">プロセス最適化</td><td>大手米系IT企業｜社内部門間のコミュニケーションフロー再構築</td></tr>
-        <tr><td><span class="td-industry">製造</span></td><td style="color:var(--text);font-weight:600">組織開発</td><td>国内大手メーカー｜次世代リーダー層向けマネジメント変革支援</td></tr>
-        <tr><td><span class="td-industry">コンサル</span></td><td style="color:var(--text);font-weight:600">エンゲージメント</td><td>大手コンサルファーム｜リモート環境下におけるチーム連携強化</td></tr>
-        <tr><td><span class="td-industry">不動産</span></td><td style="color:var(--text);font-weight:600">生産性向上</td><td>米系大手不動産会社｜営業部門の属人化解消・プロセス標準化</td></tr>
-        <tr><td><span class="td-industry">小売</span></td><td style="color:var(--text);font-weight:600">DX推進</td><td>大手小売業｜店舗・本部間のデータ連携および業務自動化支援</td></tr>
-        <tr><td><span class="td-industry">金融</span></td><td style="color:var(--text);font-weight:600">ワークプレイス改善</td><td>メガバンク｜働き方改革に伴うデジタルツール導入・定着化</td></tr>
-      </tbody>
-    </table>
   </div>
 </section>
 
@@ -308,7 +275,7 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
           <tr><th>代表取締役</th><td>石原 由一朗</td></tr>
           <tr><th>所在地</th><td>東京都渋谷区神南１丁目</td></tr>
           <tr><th>資本金</th><td>100万円</td></tr>
-          <tr><th>事業内容</th><td>組織開発・業務プロセス改善コンサルティング<br>企業のDX推進・ITツール導入支援<br>Webサイト・アプリケーションの企画・開発</td></tr>
+          <tr><th>事業内容</th><td>Webサイト・アプリケーションの企画・開発・運用</td></tr>
           <tr><th>URL</th><td><a href="https://cannonballnow.com" style="color:var(--orange);text-decoration:none">cannonballnow.com</a></td></tr>
         </table>
       </div>
@@ -357,7 +324,10 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
 </section>
 
 <footer>
-  <div class="footer-logo">CANNON<span>BALL</span></div>
+  <div class="footer-logo-wrap">
+    <img class="nav-logo-img" src="wordpress_logo_transparent_512x512.png" alt="CANNONBALL Logo">
+    <div class="footer-logo">CANNON<span>BALL</span></div>
+  </div>
   <div class="footer-sns">
     <a href="#">LinkedIn</a><a href="#">X (Twitter)</a>
   </div>
