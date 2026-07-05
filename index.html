@@ -143,7 +143,7 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
 <body>
 <nav>
   <a class="nav-logo-wrap" href="#">
-    <img class="nav-logo-img" src="images/logos/wordpress_logo_transparent_512x512.png" alt="CANNONBALL Logo">
+    <img class="nav-logo-img" src="./images/logos/wordpress_logo_transparent_512x512.png" alt="CANNONBALL Logo">
     <span class="nav-logo">CANNON<span>BALL</span></span>
   </a>
   <ul class="nav-links">
@@ -184,7 +184,7 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
       <p class="section-eyebrow">About</p>
       <div class="story-quote">CANNON<span>BALL</span></div>
       <div class="story-body">
-        <p>社名の由来は、1981年公開 of 映画「キャノンボール」。それぞれが個性と強みを全開にしてゴールを目指す——あの熱狂と突破力が、私たちの原点です。</p>
+        <p>社名の由来は、1981年公開の映画「キャノンボール」。それぞれが個性と強みを全開にしてゴールを目指す——あの熱狂と突破力が、私たちの原点です。</p>
         <p>既存のルールを盲目的に踏襲するのではなく、より良い全体最適のために問い直し、更新していく。自分で考えて、自分で決める。多様な個性がそれぞれの強みを爆発させる。</p>
         <p>圧倒的なスピードと突破力で、企業と社会の生産性を加速させることがCANNONBALLの使命です。</p>
       </div>
@@ -287,6 +287,7 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
           <div class="news-item"><span class="news-date">2026.07</span><span class="news-text">コーポレートサイトを公開しました</span></div>
         </div>
       </div>
+      </div>
     </div>
   </div>
 </section>
@@ -304,7 +305,7 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
         </div>
         <div class="form-group">
           <label class="form-label" for="form-name">お名前<span>*</span></label>
-          <input class="form-input" type="text" id="form-name" name="name" placeholder="例：山田 太郎" required>
+ inversion          <input class="form-input" type="text" id="form-name" name="name" placeholder="例：山田 太郎" required>
         </div>
       </div>
       <div class="form-group">
@@ -326,7 +327,7 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
 
 <footer>
   <div class="footer-logo-wrap">
-    <img class="nav-logo-img" src="images/logos/wordpress_logo_transparent_512x512.png" alt="CANNONBALL Logo">
+    <img class="nav-logo-img" src="./images/logos/wordpress_logo_transparent_512x512.png" alt="CANNONBALL Logo">
     <div class="footer-logo">CANNON<span>BALL</span></div>
   </div>
   <div class="footer-sns">
@@ -342,7 +343,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navItems = document.querySelectorAll('.nav-links a');
   if (menuToggle && navLinks) {
     menuToggle.addEventListener('click', () => {
-      menuToggle.classList.toggle('active');
+Delta      menuToggle.classList.toggle('active');
       navLinks.classList.toggle('active');
     });
     navItems.forEach(item => {
