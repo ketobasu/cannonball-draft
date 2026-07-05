@@ -14,10 +14,8 @@ body{background:var(--white);color:var(--text);font-family:'Inter','Noto Sans JP
 .animate-fade{opacity:0;transform:translateY(30px);transition:opacity 0.8s ease-out,transform 0.8s ease-out}
 .animate-fade.appear{opacity:1;transform:translateY(0)}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 3rem;height:64px;background:rgba(255,255,255,0.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--border2)}
-.nav-logo-wrap{display:flex;align-items:center;gap:0.5rem;text-decoration:none;z-index:110;}
-.nav-logo-img{height:28px;width:28px;object-fit:contain}
-.nav-logo{font-family:'Barlow Condensed',sans-serif;font-size:1.25rem;font-weight:900;font-style:italic;letter-spacing:0.06em;color:var(--charcoal);}
-.nav-logo span{color:var(--orange)}
+.nav-logo-wrap{display:flex;align-items:center;text-decoration:none;z-index:110;}
+.nav-logo-img{height:40px;width:auto;object-fit:contain}
 .nav-links{display:flex;list-style:none}
 .nav-links a{font-size:0.8rem;font-weight:500;color:var(--text2);text-decoration:none;padding:0 1rem;height:64px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:color 0.2s,border-color 0.2s}
 .nav-links a:hover{color:var(--orange);border-bottom-color:var(--orange)}
@@ -51,8 +49,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .story-image img{width:100%;height:100%;object-fit:cover}
 .story-image-overlay{position:absolute;inset:0;background:rgba(240,90,26,0.10)}
 .story-content{padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;background:var(--white)}
-.story-quote{font-family:'Barlow Condensed',sans-serif;font-size:clamp(3.5rem,6vw,6rem);font-weight:900;font-style:italic;color:var(--charcoal);line-height:1;margin-bottom:2rem}
-.story-quote span{color:var(--orange)}
 .story-body{font-size:0.88rem;color:var(--text2);line-height:2}
 .story-body p+p{margin-top:1rem}
 .values-strip{display:grid;grid-template-columns:repeat(3,1fr)}
@@ -115,9 +111,7 @@ textarea.form-input{resize:vertical;min-height:120px}
 .form-submit{padding:0.85rem 2.2rem;background:var(--orange);color:#fff;border:none;border-radius:3px;font-size:0.85rem;font-weight:600;letter-spacing:0.05em;cursor:pointer;transition:background 0.2s;align-self:center}
 .form-submit:hover{background:var(--orange2)}
 footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,0.06)}
-.footer-logo-wrap{display:flex;align-items:center;gap:0.5rem}
-.footer-logo{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:900;font-style:italic;letter-spacing:0.08em;color:#fff}
-.footer-logo span{color:var(--orange)}
+.footer-logo-wrap{display:flex;align-items:center;}
 .footer-sns{display:flex;gap:1.5rem}
 .footer-sns a{font-size:0.72rem;color:rgba(255,255,255,0.4);text-decoration:none;transition:color 0.2s}
 .footer-sns a:hover{color:var(--orange)}
@@ -144,11 +138,10 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
 <nav>
   <a class="nav-logo-wrap" href="#">
     <img class="nav-logo-img" src="./images/logos/wordpress_logo_transparent_512x512.png" alt="CANNONBALL Logo">
-    <span class="nav-logo">CANNON<span>BALL</span></span>
   </a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
-   <li><a href="#services">Services</a></li>
+    <li><a href="#services">Services</a></li>
     <li><a href="#info">Company</a></li>
   </ul>
   <button class="menu-toggle" aria-label="メニューを開く">
@@ -182,7 +175,6 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
     </div>
     <div class="story-content">
       <p class="section-eyebrow">About</p>
-      <div class="story-quote">CANNON<span>BALL</span></div>
       <div class="story-body">
         <p>社名の由来は、1981年公開の映画「キャノンボール」。それぞれが個性と強みを全開にしてゴールを目指す——あの熱狂と突破力が、私たちの原点です。</p>
         <p>既存のルールを盲目的に踏襲するのではなく、より良い全体最適のために問い直し、更新していく。自分で考えて、自分で決める。多様な個性がそれぞれの強みを爆発させる。</p>
@@ -287,7 +279,6 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
           <div class="news-item"><span class="news-date">2026.07</span><span class="news-text">コーポレートサイトを公開しました</span></div>
         </div>
       </div>
-      </div>
     </div>
   </div>
 </section>
@@ -305,7 +296,7 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
         </div>
         <div class="form-group">
           <label class="form-label" for="form-name">お名前<span>*</span></label>
- inversion          <input class="form-input" type="text" id="form-name" name="name" placeholder="例：山田 太郎" required>
+          <input class="form-input" type="text" id="form-name" name="name" placeholder="例：山田 太郎" required>
         </div>
       </div>
       <div class="form-group">
@@ -328,7 +319,6 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
 <footer>
   <div class="footer-logo-wrap">
     <img class="nav-logo-img" src="./images/logos/wordpress_logo_transparent_512x512.png" alt="CANNONBALL Logo">
-    <div class="footer-logo">CANNON<span>BALL</span></div>
   </div>
   <div class="footer-sns">
     <a href="#">LinkedIn</a><a href="#">X (Twitter)</a>
@@ -343,7 +333,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navItems = document.querySelectorAll('.nav-links a');
   if (menuToggle && navLinks) {
     menuToggle.addEventListener('click', () => {
-Delta      menuToggle.classList.toggle('active');
+      menuToggle.classList.toggle('active');
       navLinks.classList.toggle('active');
     });
     navItems.forEach(item => {
