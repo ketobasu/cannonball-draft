@@ -45,8 +45,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .btn-outline:hover{border-color:var(--charcoal)}
 #about{padding:0}
 .story-grid{display:grid;grid-template-columns:1fr 1fr;min-height:520px}
-.story-image{position:relative;overflow:hidden}
-.story-image img{width:100%;height:100%;object-fit:cover}
+/* 2枚の画像を並べるためのコンテナ */
+.story-images{display:flex;flex-direction:column}
+.story-image{position:relative;overflow:hidden;flex:1}
+.story-image img{width:100%;height:100%;object-fit:cover;display:block}
 .story-image-overlay{position:absolute;inset:0;background:rgba(240,90,26,0.10)}
 .story-content{padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;background:var(--white)}
 .story-quote{font-family:'Barlow Condensed',sans-serif;font-size:clamp(3.5rem,6vw,6rem);font-weight:900;font-style:italic;color:var(--charcoal);line-height:1;margin-bottom:2rem}
@@ -57,11 +59,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .value-block{padding:5rem 3.5rem;border-right:1px solid var(--border);position:relative;overflow:hidden;transition:background 0.25s;background:var(--white)}
 .value-block:last-child{border-right:none}
 .value-block:hover{background:var(--bg)}
-/* ↓ ここからPlayフォントに変更 */
 .vb-bg-letter{font-family:'Play',sans-serif;font-size:18rem;font-weight:700;color:rgba(240,90,26,0.04);position:absolute;right:-2rem;bottom:-4rem;line-height:1;pointer-events:none;user-select:none;transition:color 0.25s}
 .value-block:hover .vb-bg-letter{color:rgba(240,90,26,0.07)}
 .vb-keyword{font-family:'Play',sans-serif;font-size:clamp(3.5rem,5vw,5.5rem);font-weight:700;color:var(--orange);line-height:1;margin-bottom:1.5rem}
-/* ↑ ここまで */
 .vb-sub{font-size:0.9rem;font-weight:600;color:var(--text);margin-bottom:1rem}
 .vb-body{font-size:0.8rem;color:var(--text2);line-height:2}
 section{padding:6rem 0}
@@ -73,10 +73,8 @@ section{padding:6rem 0}
 #services{background:var(--white)}
 .concept-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:4rem}
 .concept-block{background:var(--bg);border:1px solid var(--border);border-radius:4px;padding:2.2rem;position:relative;overflow:hidden}
-/* ↓ ここからPlayフォントに変更 */
 .cb-letter{font-family:'Play',sans-serif;font-size:5rem;font-weight:700;color:rgba(240,90,26,0.05);position:absolute;right:1rem;top:0.2rem;line-height:1;pointer-events:none;user-select:none}
 .cb-keyword{font-family:'Play',sans-serif;font-size:1.8rem;font-weight:700;color:var(--orange);margin-bottom:0.4rem;line-height:1}
-/* ↑ ここまで */
 .cb-title{font-size:0.92rem;font-weight:700;color:var(--text);margin-bottom:0.6rem}
 .cb-body{font-size:0.8rem;color:var(--text2);line-height:1.6}
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
@@ -140,7 +138,8 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
   .hero-text-on-image,.hero-bottom{padding:2rem}
   .hero-bottom{grid-template-columns:1fr}
   .story-grid,.values-strip,.concept-strip,.services-grid,.photo-cards,.info-grid{grid-template-columns:1fr}
-  .story-image{height:260px}
+  /* スマホでは2枚の画像を横並びにして高さを確保 */
+  .story-images{flex-direction:row;height:260px}
   .form-row{grid-template-columns:1fr;gap:1.2rem}
   footer{flex-direction:column;gap:1rem;text-align:center}
 }
@@ -181,21 +180,28 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
 
 <section id="about" class="animate-fade">
   <div class="story-grid">
-    <div class="story-image">
-      <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=900&q=80&fit=crop" alt="疾走感のある夜間都市の光跡" loading="lazy">
-      <div class="story-image-overlay"></div>
+    <!-- 2枚の画像を並べるコンテナ -->
+    <div class="story-images">
+      <div class="story-image">
+        <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=900&q=80&fit=crop" alt="疾走感のある夜間都市の光跡" loading="lazy">
+        <div class="story-image-overlay"></div>
+      </div>
+      <div class="story-image">
+        <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?w=900&q=80&fit=crop" alt="プールへの豪快な飛び込み" loading="lazy">
+        <div class="story-image-overlay"></div>
+      </div>
     </div>
+    
     <div class="story-content">
       <p class="section-eyebrow">About</p>
-      <!-- ここから修正した箇所 -->
       <div class="story-body">
-        <p>社名の由来の1つは、1981年公開の映画「キャノンボール」。それぞれが個性と強みを全開にしてゴールを目指す——あの熱狂と突破力が、私たちの原点です。そしてもう1つ、英語圏の文脈で「Cannonball」には「プールへの豪快な飛び込み」という意味があります。</p>
-        <p>かつて私が日系企業から外資系企業に転職したばかりの頃、初めての海外出張での会議で、英語への不安から全く発言できずにいました。そんな私に、当時のカナダ人の上司が「Jump In！（会話に割って入れ！）」と声をかけてくれました。</p>
-        <p>勇気を出して話してみると、意外にも言葉は伝わりました。私は「喋れない」のではなく「喋らなかっただけ」だったのです。それは私が自らのコンフォートゾーンから飛び出した瞬間であり、「自分の態度を変えれば結果が変わる」と深く学んだ原体験です。</p>
-        <p>既存のルールを踏襲するだけでなく、コンフォートゾーンを抜け出して自ら飛び込む（Jump In / Cannonball）勇気を持つこと。多様な個性がそれぞれの強みを爆発させること。</p>
+        <p>社名の由来は2つあります。1つ目は、1981年公開の映画「キャノンボール」。それぞれが個性と強みを全開にしてゴールを目指す——あの熱狂と突破力が、私たちの原点です。</p>
+        <p>既存のルールを盲目的に踏襲するのではなく、より良い全体最適のために問い直し、更新していく。自分で考えて、自分で決める。多様な個性がそれぞれの強みを爆発させる。</p>
+        <p>そして2つ目の由来は、英語圏の人たちが使う「Cannonball（プールへの豪快な飛び込み）」という言葉です。</p>
+        <p>かつて私が日系企業から外資系企業に転職したての頃、初めての海外出張に行きました。しかし、英語が喋れないという不安から会議で全く発言できずにいました。すると、当時のカナダ人の上司でありメンターが「Jump In！（会話に割って入れ！）」と言ってくれたのです。</p>
+        <p>勇気を出して英語で話してみると意外に伝わりました。私は「喋れない」のではなく「喋らなかっただけ」だったのです。これが自らのコンフォートゾーンを出るきっかけとなり、自分の態度を変えれば結果が変わるのだと深く学びました。</p>
         <p>圧倒的なスピードと突破力、そして未知の領域へ飛び込む勇気で、企業と社会の生産性を加速させることがCANNONBALLの使命です。</p>
       </div>
-      <!-- ここまで修正した箇所 -->
     </div>
   </div>
   <div class="values-strip">
