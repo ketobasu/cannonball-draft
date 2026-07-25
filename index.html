@@ -45,11 +45,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .btn-outline:hover{border-color:var(--charcoal)}
 #about{padding:0}
 .story-grid{display:grid;grid-template-columns:1fr 1fr;min-height:520px}
-.story-images{display:flex;flex-direction:column}
-/* --- ↓ 画像の高さを約半分にし、中央でセンタリングする調整 ↓ --- */
-.story-image{position:relative;overflow:hidden;height:50%; /* PC表示の時に半分の高さにする */}
+/* --- ↓ 高さを明確に指定し、画像を縦半分ずつにする修正 ↓ --- */
+.story-images{display:flex;flex-direction:column;height:100%;}
+.story-image{position:relative;overflow:hidden;flex-basis:50%;height:50%;}
 .story-image img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
-/* --- ↑ 調整ここまで ↑ --- */
+/* --- ↑ 修正ここまで ↑ --- */
 .story-image-overlay{position:absolute;inset:0;background:rgba(240,90,26,0.10)}
 .story-content{padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;background:var(--white)}
 .story-quote{font-family:'Barlow Condensed',sans-serif;font-size:clamp(3.5rem,6vw,6rem);font-weight:900;font-style:italic;color:var(--charcoal);line-height:1;margin-bottom:2rem}
@@ -140,9 +140,10 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
   .hero-text-on-image,.hero-bottom{padding:2rem}
   .hero-bottom{grid-template-columns:1fr}
   .story-grid,.values-strip,.concept-strip,.services-grid,.photo-cards,.info-grid{grid-template-columns:1fr}
-  /* スマホの時は高さを固定し、左右に並べる（既存の動作を維持） */
-  .story-images{flex-direction:row;height:260px}
-  .story-image{height:100%;}
+  /* --- ↓ スマホ表示の時に画像を横並びにして縦横比を維持する修正 ↓ --- */
+  .story-images{flex-direction:row;height:260px;}
+  .story-image{flex-basis:50%;height:100%;}
+  /* --- ↑ 修正ここまで ↑ --- */
   .form-row{grid-template-columns:1fr;gap:1.2rem}
   footer{flex-direction:column;gap:1rem;text-align:center}
 }
@@ -189,7 +190,6 @@ footer{background:var(--charcoal2);padding:2rem 3rem;display:flex;justify-conten
         <div class="story-image-overlay"></div>
       </div>
       <div class="story-image">
-        <!-- 添付していただいた画像をローカル参照で設定 -->
         <img src="./images/logos/austin-neill-zNlM2ADjFC0-unsplash.jpg" alt="空中で身体を丸めてダイブするキャノンボール" loading="lazy">
         <div class="story-image-overlay"></div>
       </div>
